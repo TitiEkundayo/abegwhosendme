@@ -1,0 +1,225 @@
+// GENERAL
+@use "./global" as *;
+@use "_mediaQueries";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $pryColor;
+}
+
+// font and text
+h1 {
+	@include H1Font;
+}
+h2 {
+	@include H2Font;
+}
+h3 {
+	@include H3Font;
+}
+
+h4 {
+	@include H4Font;
+}
+h5 {
+	@include H5Font;
+}
+h6 {
+	@include H6Font;
+}
+
+p {
+	@include pFont;
+}
+
+.whiteText {
+	color: $bodyTextColor;
+}
+
+.yellowText {
+	color: $secColor;
+}
+
+.mutedTexts {
+	@include mutedFont;
+}
+
+.mutedText {
+	@include mutedFont;
+	color: $secColor;
+	line-height: normal;
+}
+
+.removeLineHeight {
+	line-height: 0;
+}
+
+// MENU
+// offcanvas
+.offcanvas {
+	background-color: $pryColorVariant;
+}
+
+@media screen and (max-width: 2000px) {
+	.offcanvas {
+		width: auto;
+	}
+}
+
+// HERO
+.homeHeroImage {
+	background-image: url("../images/heroImages/homeHero.png");
+	height: 100vh;
+	// max-width: 100vw;
+}
+
+.CommunityHero {
+	background-image: url("../images/heroImages/heroImg.png");
+	height: 70vh;
+}
+
+// BUTTONS
+.activeButton1 {
+	@include activeButton1;
+	// min-width: 30%;
+	min-width: 10%;
+}
+
+.activeButton2 {
+	@include activeButton2;
+	min-width: 35%;
+}
+
+// FOOTER
+.bg-footer {
+	background-color: $pryColorVariant;
+}
+
+.footerCEOText {
+	@include mutedFont;
+	color: $secColor;
+	line-height: normal;
+}
+
+.formField {
+	background-color: rgba(255, 255, 255, 0.09);
+	border: none;
+	border-radius: 5px;
+}
+
+// MEDIA QUERIES
+@media (max-width: 920px) {
+	// HERO STYLES
+	.heroContent {
+		padding: 90px 0 0 35px;
+	}
+	// FOOTER STYLES
+	.footerSignatureWidth {
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 1;
+	}
+	.subscribeBtn {
+		max-width: 40%;
+	}
+
+	.alignElements {
+		text-align: center;
+	}
+
+	.subscribeColumn {
+		margin-top: 15px;
+	}
+
+	.supportColumn {
+		margin-top: 40px;
+	}
+
+	.footerNavItems {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+
+	.footerNavItem {
+		// padding-left: 10px !important;
+		font-size: 0.812em;
+		padding-right: 15px !important;
+	}
+
+	// CARD STYLES
+	.wideCard {
+		max-width: 75%;
+	}
+
+	.wideCardImg {
+		min-width: 100%;
+	}
+
+	// .miniWideCard {
+	// 	width: auto;
+	// }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1024px) and (orientation: landscape) {
+	// HERO STYLES
+	.heroContent {
+		padding: 90px 0 0 35px;
+	}
+	// FOOTER STYLES
+	// first column of the footer
+	.footerSignatureWidth {
+		max-width: 35%;
+	}
+
+	// second column of the footer (form column)
+	.footerFormWidth {
+		max-width: 75%;
+	}
+
+	.subscribeBtn {
+		max-width: 40%;
+	}
+
+	// CARD STYLES
+	.wideCard {
+		max-width: 50%;
+	}
+
+	.miniWideCard {
+		max-width: 40%;
+	}
+}
+
+// CARDS
+.cardOutline {
+	border: 1px solid $secColor;
+	border-radius: 10px;
+}
+.cardBody {
+	background-color: $pryColor;
+}
+
+.circledImage {
+	max-width: 20%;
+	border-radius: 100%;
+}
+
+.memBenefitCard {
+	max-width: 50%;
+	max-height: 50%;
+	border-radius: 50%;
+}
+
+.leftSideWideCard {
+	background: $pryColor;
+}
+
+// .DashboardCard {
+// }

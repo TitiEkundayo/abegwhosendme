@@ -1,0 +1,37 @@
+// @use "sass:map";
+
+// $mediaQueries: (
+// 	"tinyScreen": 0,
+// 	"smallScreen": 600px,
+// 	"mediumScreen": 900px,
+// 	"largeScreen": 1024px,
+// 	"xLargeScreen": 1200px,
+// );
+
+// @mixin mediumScreen {
+// 	@media (max-width: map-get($mediaQueries, "mediumScreen")) {
+// 		@content;
+// 	}
+// }
+
+// @mixin for-tablet-portrait-up {
+// 	@media (min-width: 600px) {
+// 		@content;
+// 	}
+// }
+
+@mixin mediaScreen($screenPoint) {
+	@if $screenPoint == smallScreen {
+		@media (max-width: 900px) {
+			@content;
+		}
+	} @else if $screenPoint == largeScreen_LandScape {
+		@media (min-width: 1024px) and (orientation: landscape) {
+			@content;
+		}
+	}
+
+	// @else if $screenPoint == largeScreen_LandScape {
+	//     @media (min-width: 1024) and ()
+	// }
+}
