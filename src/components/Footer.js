@@ -39,13 +39,13 @@ const Footer = () => {
 					</h5>
 
 					<SubscribeForm />
-					<div className="mt-3 ps-0 footerNavItems">
+					<div className="mt-3 footerSocialIcons">
 						<SocialMediaIcons />
 					</div>
 				</div>
 
-				<div className="col-md-2 col-sm-12 supportColumn">
-					<h5 className="text-white alignElements">Support</h5>
+				<div className="col-md-2 col-sm-12 footerSupportColumn">
+					<h5 className="text-white centerText">Support</h5>
 					<ul className="navbar-nav footerNavItems">
 						<li className="nav-item">
 							<a className="nav-link text-white-50 footerNavItem" href="#">

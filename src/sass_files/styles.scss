@@ -64,6 +64,11 @@ p {
 	background-color: $pryColorVariant;
 }
 
+.profilePix {
+	border: 0px solid black;
+	border-radius: 50px;
+}
+
 @media screen and (max-width: 2000px) {
 	.offcanvas {
 		width: auto;
@@ -73,14 +78,16 @@ p {
 // HERO
 .homeHeroImage {
 	background-image: url("../images/heroImages/homeHero.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 100vh;
-	// max-width: 100vw;
+	width: 100vw;
 }
 
-.CommunityHero {
-	background-image: url("../images/heroImages/heroImg.png");
-	height: 70vh;
-}
+// .CommunityHero {
+// 	background-image: url("../images/heroImages/heroImg.png");
+// 	height: 70vh;
+// }
 
 // BUTTONS
 .activeButton1 {
@@ -112,11 +119,110 @@ p {
 }
 
 // MEDIA QUERIES
-@media (max-width: 920px) {
+@media only screen and (max-width: 600px) {
 	// HERO STYLES
 	.heroContent {
-		padding: 90px 0 0 35px;
+		padding: 130px 0 5rem 35px;
+		width: 90%;
 	}
+
+	.joinUsBtn {
+		width: 100px;
+	}
+
+	.CommunityHero {
+		background-image: url("../images/heroImages/heroImg.png");
+		min-height: 47vh;
+	}
+
+	// CARD STYLES
+	.wideCard {
+		max-width: 75%;
+	}
+
+	.wideCardImg {
+		min-width: 100%;
+	}
+
+	// .miniWideCard {
+	// 	width: auto;
+	// }
+
+	// FOOTER STYLES
+	.footerSignatureWidth {
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 1;
+	}
+	.subscribeBtn {
+		max-width: 40%;
+	}
+
+	.alignElements {
+		text-align: center;
+	}
+
+	.subscribeColumn {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	// .subText {
+
+	// }
+
+	.footerSupportColumn {
+		margin-top: 40px;
+	}
+
+	.centerText {
+		text-align: center;
+	}
+
+	.footerNavItems {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+
+	.footerNavItem {
+		// padding-left: 10px !important;
+		font-size: 0.812em;
+		padding-right: 15px !important;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.heroContent {
+		padding: 140px 0 0 35px;
+		width: 55%;
+	}
+
+	.joinUsBtn {
+		width: 100px;
+	}
+	.CommunityHero {
+		background-image: url("../images/heroImages/heroImg.png");
+		background-repeat: no-repeat;
+		height: 40vh;
+	}
+
+	// CARD STYLES
+	.wideCard {
+		max-width: 75%;
+	}
+
+	.wideCardImg {
+		min-width: 100%;
+	}
+
+	// .miniWideCard {
+	// 	width: auto;
+	// }
+
 	// FOOTER STYLES
 	.footerSignatureWidth {
 		display: flex;
@@ -135,8 +241,12 @@ p {
 		margin-top: 15px;
 	}
 
-	.supportColumn {
+	.footerSupportColumn {
 		margin-top: 40px;
+	}
+
+	.supportText {
+		text-align: center;
 	}
 
 	.footerNavItems {
@@ -146,32 +256,40 @@ p {
 		flex-wrap: nowrap;
 	}
 
+	// .footerSocialIcons {
+	// 	display: flex;
+	// 	justify-content: center;
+	// }
+
 	.footerNavItem {
 		// padding-left: 10px !important;
 		font-size: 0.812em;
 		padding-right: 15px !important;
 	}
-
-	// CARD STYLES
-	.wideCard {
-		max-width: 75%;
-	}
-
-	.wideCardImg {
-		min-width: 100%;
-	}
-
-	// .miniWideCard {
-	// 	width: auto;
-	// }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1024px) and (orientation: landscape) {
 	// HERO STYLES
+	// .heroContent {
+	// 	padding: 150px 0 0 35px;
+	// 	width: 60%;
+	// }
+
 	.heroContent {
-		padding: 90px 0 0 35px;
+		padding: 140px 0 0 35px;
+		width: 40%;
 	}
+
+	.joinUsBtn {
+		width: 100px;
+	}
+
+	.CommunityHero {
+		background-image: url("../images/heroImages/heroImg.png");
+		height: 70vh;
+	}
+
 	// FOOTER STYLES
 	// first column of the footer
 	.footerSignatureWidth {
@@ -181,6 +299,39 @@ p {
 	// second column of the footer (form column)
 	.footerFormWidth {
 		max-width: 75%;
+	}
+
+	.footerSupportColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		// max-width: 100%;
+	}
+
+	.supportText {
+		text-align: start;
+	}
+
+	.alignElements {
+		text-align: start;
+	}
+
+	.footerNavItems {
+		// display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		// flex-wrap: nowrap;
+	}
+
+	// .footerSocialIcons {
+	// 	display: flex;
+	// 	justify-content: center;
+	// }
+
+	.footerNavItem {
+		// padding-left: 10px !important;
+		font-size: 0.812em;
+		padding-right: 15px !important;
 	}
 
 	.subscribeBtn {

@@ -55,7 +55,7 @@ export const DownloadBtn = () => {
 
 // community page buttons
 export const JoinUsBtn = () => {
-	return <button className="btn activeButton1">Join Us</button>;
+	return <button className="btn activeButton1 joinUsBtn">Join Us</button>;
 };
 
 export const ReadMoreBtn = () => {

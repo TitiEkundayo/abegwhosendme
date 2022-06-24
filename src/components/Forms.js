@@ -136,7 +136,7 @@ export const SubscribeForm = () => {
 					placeholder="Email"
 				/>
 			</div>
-			<div className="">
+			<div className="d-flex justify-content-center">
 				<SubscribeBtn />
 			</div>
 		</form>

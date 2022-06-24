@@ -76,6 +76,11 @@ p {
   background-color: #121212;
 }
 
+.profilePix {
+  border: 0px solid black;
+  border-radius: 50px;
+}
+
 @media screen and (max-width: 2000px) {
   .offcanvas {
     width: auto;
@@ -83,12 +88,10 @@ p {
 }
 .homeHeroImage {
   background-image: url("../images/heroImages/homeHero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-}
-
-.CommunityHero {
-  background-image: url("../images/heroImages/heroImg.png");
-  height: 70vh;
+  width: 100vw;
 }
 
 .activeButton1 {
@@ -120,9 +123,92 @@ p {
   border-radius: 5px;
 }
 
-@media (max-width: 920px) {
+@media only screen and (max-width: 600px) {
   .heroContent {
-    padding: 90px 0 0 35px;
+    padding: 130px 0 5rem 35px;
+    width: 90%;
+  }
+
+  .joinUsBtn {
+    width: 100px;
+  }
+
+  .CommunityHero {
+    background-image: url("../images/heroImages/heroImg.png");
+    min-height: 47vh;
+  }
+
+  .wideCard {
+    max-width: 75%;
+  }
+
+  .wideCardImg {
+    min-width: 100%;
+  }
+
+  .footerSignatureWidth {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+  }
+
+  .subscribeBtn {
+    max-width: 40%;
+  }
+
+  .alignElements {
+    text-align: center;
+  }
+
+  .subscribeColumn {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footerSupportColumn {
+    margin-top: 40px;
+  }
+
+  .centerText {
+    text-align: center;
+  }
+
+  .footerNavItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .footerNavItem {
+    font-size: 0.812em;
+    padding-right: 15px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .heroContent {
+    padding: 140px 0 0 35px;
+    width: 55%;
+  }
+
+  .joinUsBtn {
+    width: 100px;
+  }
+
+  .CommunityHero {
+    background-image: url("../images/heroImages/heroImg.png");
+    background-repeat: no-repeat;
+    height: 40vh;
+  }
+
+  .wideCard {
+    max-width: 75%;
+  }
+
+  .wideCardImg {
+    min-width: 100%;
   }
 
   .footerSignatureWidth {
@@ -143,8 +229,12 @@ p {
     margin-top: 15px;
   }
 
-  .supportColumn {
+  .footerSupportColumn {
     margin-top: 40px;
+  }
+
+  .supportText {
+    text-align: center;
   }
 
   .footerNavItems {
@@ -158,18 +248,20 @@ p {
     font-size: 0.812em;
     padding-right: 15px !important;
   }
-
-  .wideCard {
-    max-width: 75%;
-  }
-
-  .wideCardImg {
-    min-width: 100%;
-  }
 }
 @media (min-width: 1024px) and (orientation: landscape) {
   .heroContent {
-    padding: 90px 0 0 35px;
+    padding: 140px 0 0 35px;
+    width: 40%;
+  }
+
+  .joinUsBtn {
+    width: 100px;
+  }
+
+  .CommunityHero {
+    background-image: url("../images/heroImages/heroImg.png");
+    height: 70vh;
   }
 
   .footerSignatureWidth {
@@ -178,6 +270,29 @@ p {
 
   .footerFormWidth {
     max-width: 75%;
+  }
+
+  .footerSupportColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .supportText {
+    text-align: start;
+  }
+
+  .alignElements {
+    text-align: start;
+  }
+
+  .footerNavItems {
+    flex-direction: column;
+  }
+
+  .footerNavItem {
+    font-size: 0.812em;
+    padding-right: 15px !important;
   }
 
   .subscribeBtn {
